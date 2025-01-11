@@ -38,11 +38,11 @@ Add the following lines to the file:
 ```bash
 #!/bin/bash
 unclutter -idle 0.1 -root & # Hides the mouse cursor
-chromium-browser --noerrdialogs --kiosk --incognito http://yourwebsite.com
+chromium-browser --noerrdialogs --kiosk --incognito https://time.is/
 
 ```
 
-Replace http://yourwebsite.com with your desired website URL.
+Replace https://time.is/ with your desired website URL.
 
 Save and exit the file by pressing `Ctrl + X`, then `Y`, and `Enter`.
 
