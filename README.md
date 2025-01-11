@@ -3,7 +3,7 @@ A simple Raspberry Pi Kiosk app
 
 # Auto-Start Chrome in Full-Screen Mode on Raspberry Pi
 
-This guide explains how to configure a Raspberry Pi to automatically launch Chrome in kiosk mode (full-screen without mouse cursor) after booting and load a specific website.
+This guide explains how to configure a Raspberry Pi to automatically launch Chrome in kiosk mode (full-screen) after booting and load a specific website.
 
 ---
 
