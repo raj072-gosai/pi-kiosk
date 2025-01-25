@@ -45,10 +45,6 @@ python3 /home/pi/shutdown.py
 
 Replace https://time.is/ with your desired website URL.
 
-```
-
-Replace https://time.is/ with your desired website URL.
-
 Save and exit the file by pressing `Ctrl + X`, then `Y`, and `Enter`.
 
 ### 3. Make the script executable
