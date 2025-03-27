@@ -1,0 +1,96 @@
+delete command 
+
+sudo rm -r /var/www/html/display/index.php
+
+
+copy the webside
+
+sudo cp -r /path/to/your/php/website/* /var/www/html/
+
+
+**********************************************************
+
+Steps to Show the Website on Raspberry Pi Startup
+
+1. Install a Lightweight Browser
+
+sudo apt install chromium-browser -y
+************************************************
+
+2. Set Raspberry Pi to Boot into GUI
+
+
+sudo raspi-config
+
+Go to System Options → Boot/Auto Login → Desktop GUI, automatically logged in.
+Reboot the Raspberry Pi:
+
+sudo reboot
+
+*************************************************
+3. Create an Autostart Script
+
+nano ~/.config/lxsession/LXDE-pi/autostart
+
+
+@lxpanel --profile LXDE-pi
+@pcmanfm --desktop --profile LXDE-pi
+@chromium-browser --kiosk http://192.168.68.22/display
+
+
+Replace http://localhost with the URL of your website (e.g., http://<Raspberry_Pi_IP> or a specific page).
+
+--kiosk mode makes the browser run in fullscreen and removes the address bar, tabs, etc.
+Save the file (Ctrl+O, Enter, Ctrl+X).
+
+
+**************************************************************
+4. Disable Screen Saver and Power Management
+To prevent the screen from going to sleep:
+
+Install xscreensaver:
+
+                       sudo apt install xscreensaver -y
+
+
+Disable the screensaver:
+
+			xscreensaver-demo
+
+In the GUI, set the screensaver to "Disable."
+
+Disable power management:
+				sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
+
+
+Add the following lines:
+
+
+@xset s off
+@xset -dpms
+@xset s noblank
+
+
+************************************************************
+5. Reboot the Raspberry Pi
+Reboot your Raspberry Pi to apply the changes:
+
+sudo reboot
+
+*********************************************************
+
+Optional: Exit or Adjust Kiosk Mode
+If you want to exit kiosk mode, press:
+
+Ctrl+Alt+T to open a terminal.
+Run pkill chromium-browser to stop the browser.
+
+
+	
+
+
+
+
+
+
+

@@ -1,0 +1,67 @@
+full secreen raspberry pi
+________________________________________________________________
+sudo apt update
+sudo apt install chromium-browser
+
+
+________________________________________________________________
+
+nano /home/raj/start_chromium.sh
+
+
+
+#!/bin/bash
+unclutter --timeout 0.1 --jitter 10 & # Hides the mouse cursor
+chromium-browser --noerrdialogs --kiosk --incognito 192.168.136.25/display
+
+
+_______________________________________________________________________
+
+chmod +x /home/raj/start_chromium.sh
+
+
+___________________________________________________________________
+
+nano ~/.config/autostart/chromium.desktop
+
+
+[Desktop Entry]
+Type=Application
+Name=Chromium Kiosk
+Exec=/home/raj/start_chromium.sh
+X-GNOME-Autostart-enabled=true
+
+
+______________________________________________________________________
+
+
+
+
+link of this chat 
+
+https://chatgpt.com/share/67597bfe-461c-8012-b232-3774ed4f06ee
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
